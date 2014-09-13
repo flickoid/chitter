@@ -2,8 +2,8 @@ require 'sinatra'
 require 'data_mapper'
 require './lib/peep'
 require './lib/user'
-require_relative 'app/helpers/application'
-require_relative 'app/data_mapper_setup'
+require_relative 'helpers/application'
+require_relative 'data_mapper_setup'
 
 enable :sessions
 set :session_secret, 'super secret'

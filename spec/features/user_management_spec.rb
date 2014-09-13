@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-require './lib/user'
+# require './lib/user'
 
 feature "User signs up" do
 

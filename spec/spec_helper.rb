@@ -1,6 +1,6 @@
 ENV["RACK_ENV"] = 'test'
 
-require './server.rb'
+require './app/server.rb'
 require './lib/user'
 require './lib/peep'
 require 'database_cleaner'
