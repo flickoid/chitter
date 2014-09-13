@@ -1,0 +1,9 @@
+<h1>Welcome to Chitter!</h1>
+
+Current peeps:
+<ul>
+<% @peeps.each do |peep| %>
+  <li><%= peep.posted_by_name %> <%= peep.posted_by_username %> <%= peep.body %></li>
+  <% end %>
+</ul>
+
