@@ -36,6 +36,12 @@ post '/sessions' do
   end
 end
 
+delete '/sessions' do
+  flash[:notice] = "Good bye!"
+  session[:user_id] = nil
+  redirect to('/')
+end
+
 post '/users' do
   @user = User.new(:name => params[:name],
               :username => params[:username],
