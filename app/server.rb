@@ -20,6 +20,22 @@ get '/users/new' do
   erb :"users/new"
 end
 
+get '/sessions/new' do
+  erb :"sessions/new"
+end
+
+post '/sessions' do
+  username, password = params[:username], params[:password]
+  user = User.authenticate(username, password)
+  if user
+    session[:user_id] = user.id
+    redirect to('/')
+  else
+    flash[:errors] = ["The username or password are incorrect"]
+    erb :"sessions/new"
+  end
+end
+
 post '/users' do
   @user = User.new(:name => params[:name],
               :username => params[:username],
